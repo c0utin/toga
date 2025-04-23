@@ -38,6 +38,11 @@
     # '';
   };
 
+
+  # /.config 
+
+	# i3
+	xdg.configFile."i3/config".source = inputs.self + "/modules/i3/config";
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
