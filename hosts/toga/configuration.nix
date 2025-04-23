@@ -111,6 +111,7 @@
     users = {
       "toga" = import ./home.nix;
     };
+    backupFileExtension = "backup";
   };
 
   # Install firefox.
