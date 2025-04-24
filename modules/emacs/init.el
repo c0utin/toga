@@ -22,6 +22,7 @@
 
 (use-package magit)
 
+;; Clipboard settings
 (use-package xclip
   :config
   (xclip-mode 1)
@@ -39,7 +40,20 @@
   (global-set-key (kbd "C-c c") 'my/copy-to-system)
   (global-set-key (kbd "C-c v") 'my/paste-from-system))
 
+(setq select-enable-clipboard t)
+(setq select-enable-primary t)
+
+;; languages
 (use-package zig-mode)
+
+(use-package go-mode
+  :ensure t
+  :mode "\\.go\\'"
+  :hook (go-mode . lsp-deferred))
+(use-package go-mode
+  :ensure t
+  :mode "\\.go\\'"
+  :hook (go-mode . lsp-deferred))
 
 ;; UI Tweaks
 (tool-bar-mode 0)
@@ -47,8 +61,4 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (global-display-line-numbers-mode)
-
-;; Clipboard settings
-(setq select-enable-clipboard t)
-(setq select-enable-primary t)
 
