@@ -1,13 +1,20 @@
 { config, pkgs, inputs, system, ... }:
 
+  let
+    languagesDir = "${inputs.self}/hosts/toga/languages";
+    files = builtins.readDir languagesDir;
+    _ = builtins.trace "files: ${toString files}" "";
+    languageModule = map (name: "${languagesDir}/${name}") (builtins.attrNames files);
+in
 {
   home.username = "toga";
   home.homeDirectory = "/home/toga";
 
   home.stateVersion = "24.11";
+
+  # nix imports
+  imports = languageModule;
  
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = with pkgs; [
     nushell
     emacs
