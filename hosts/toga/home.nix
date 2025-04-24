@@ -1,19 +1,18 @@
 { config, pkgs, inputs, system, ... }:
 
-  let
-    languagesDir = "${inputs.self}/hosts/toga/languages";
-    files = builtins.readDir languagesDir;
-    _ = builtins.trace "files: ${toString files}" "";
-    languageModule = map (name: "${languagesDir}/${name}") (builtins.attrNames files);
-in
 {
+
+  imports = [
+    ./languages/go.nix
+    ./languages/js.nix  
+  ];
+
   home.username = "toga";
   home.homeDirectory = "/home/toga";
 
   home.stateVersion = "24.11";
 
-  # nix imports
-  imports = languageModule;
+
 
   # :(
   nixpkgs.config.allowUnfree = true;
