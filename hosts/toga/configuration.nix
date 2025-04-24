@@ -138,6 +138,7 @@
     pavucontrol
     xorg.xev
     pulseaudio
+    xfce.thunar
     xclip
   ];
 
