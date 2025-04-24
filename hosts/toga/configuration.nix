@@ -93,7 +93,7 @@
     #media-session.enable = true;
   };
 
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.toga = {
@@ -132,6 +132,12 @@
     kitty
     vim   
     wget
+    brightnessctl
+    alsa-utils
+    pulsemixer
+    pavucontrol
+    xorg.xev
+    pulseaudio
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -13,12 +13,11 @@
     emacs
     zed-editor
     obs-studio
+    nushell    
+
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
