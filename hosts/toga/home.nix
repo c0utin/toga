@@ -12,6 +12,7 @@
     nushell
     emacs
     zed-editor
+    obs-studio
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
