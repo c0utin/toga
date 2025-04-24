@@ -44,8 +44,12 @@
 	# i3
 	xdg.configFile."i3/config".source = "${inputs.self}/modules/i3/config";
 
+	# emacs
+	xdg.configFile."emacs/init.el".source = "${inputs.self}/modules/emacs/init.el";
+
+
   home.sessionVariables = {
-    # EDITOR = "emacs";
+     EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.

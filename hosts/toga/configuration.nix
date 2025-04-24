@@ -138,6 +138,7 @@
     pavucontrol
     xorg.xev
     pulseaudio
+    xclip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
