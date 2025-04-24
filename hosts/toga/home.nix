@@ -14,6 +14,9 @@ in
 
   # nix imports
   imports = languageModule;
+
+  # :(
+  nixpkgs.config.allowUnfree = true;
  
   home.packages = with pkgs; [
     nushell
@@ -21,9 +24,7 @@ in
     zed-editor
     obs-studio
     nushell    
-
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    code-cursor 
 
 
     # flake
