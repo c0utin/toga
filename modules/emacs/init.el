@@ -1,10 +1,9 @@
 ;; MELPA setup
 (require 'package)
-(setq package-enable-at-startup nil) ;; evita carregamento duplicado
+(setq package-enable-at-startup nil) 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; Instalação automática do use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -12,7 +11,7 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; Pacotes
+;; Pkts
 (use-package evil
   :config
   (evil-mode 1))
