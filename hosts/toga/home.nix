@@ -5,6 +5,7 @@
   imports = [
     ./languages/go.nix
     ./languages/js.nix  
+    ./languages/femboy.nix
   ];
 
   home.username = "toga";

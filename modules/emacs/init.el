@@ -46,6 +46,8 @@
 ;; languages
 (use-package zig-mode)
 
+(use-package rust-mode)
+
 (use-package go-mode
   :ensure t
   :mode "\\.go\\'"
