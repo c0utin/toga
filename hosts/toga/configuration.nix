@@ -140,6 +140,7 @@
     pulseaudio
     xfce.thunar
     xclip
+    openssl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
