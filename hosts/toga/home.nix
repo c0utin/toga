@@ -26,6 +26,7 @@
     nushell    
     code-cursor 
     audacity
+    zapzap
 
 
     # flake
