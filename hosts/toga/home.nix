@@ -28,6 +28,7 @@
     audacity
     zapzap
     vesktop
+    gnumake
 
 
     # flake
