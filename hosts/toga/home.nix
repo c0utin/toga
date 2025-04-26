@@ -25,6 +25,7 @@
     obs-studio
     nushell    
     code-cursor 
+    audacity
 
 
     # flake
