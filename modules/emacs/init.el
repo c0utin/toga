@@ -34,9 +34,9 @@
                            "xclip" nil nil nil "-selection" "clipboard")
       (message "Copied to system clipboard")))
   (defun my/paste-from-system ()
-    "Paste text from system clipboard using xclip."
+    "Paste text from system clipboard using Emacs native functions."
     (interactive)
-    (insert (shell-command-to-string "xclip -o -selection clipboard")))
+    (insert (or (gui-get-selection 'CLIPBOARD) "")))
   (global-set-key (kbd "C-c c") 'my/copy-to-system)
   (global-set-key (kbd "C-c v") 'my/paste-from-system))
 
@@ -63,4 +63,3 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (global-display-line-numbers-mode)
-
