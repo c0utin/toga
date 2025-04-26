@@ -27,6 +27,7 @@
     code-cursor 
     audacity
     zapzap
+    vesktop
 
 
     # flake
