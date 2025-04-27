@@ -2,9 +2,10 @@
 
 {
 	home.packages = with pkgs; [
-	  go
-   	  gopls
+          go
+          gopls
           golangci-lint
           golangci-lint-langserver
+          go-migrate
 	];
 }
