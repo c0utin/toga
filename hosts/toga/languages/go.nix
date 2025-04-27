@@ -7,5 +7,6 @@
           golangci-lint
           golangci-lint-langserver
           go-migrate
+          go-swag
 	];
 }
