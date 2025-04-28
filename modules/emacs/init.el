@@ -73,4 +73,4 @@
 (global-display-line-numbers-mode)
 
 ;; input method
-(set-language-environment "Latin-1")
+(setq default-input-method "latin-1-postfix")
