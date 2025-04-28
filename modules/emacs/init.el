@@ -71,3 +71,6 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (global-display-line-numbers-mode)
+
+;; input method
+(set-language-environment "Latin-1")
