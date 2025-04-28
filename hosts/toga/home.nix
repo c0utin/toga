@@ -14,7 +14,6 @@
   home.stateVersion = "24.11";
 
 
-
   # :(
   nixpkgs.config.allowUnfree = true;
  
@@ -30,6 +29,8 @@
     vesktop
     calibre
     gnumake
+    taskwarrior3
+    taskwarrior-tui
 
 
     # flake
