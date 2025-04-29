@@ -31,6 +31,7 @@
     gnumake
     taskwarrior3
     taskwarrior-tui
+    postgresql
 
 
     # flake
