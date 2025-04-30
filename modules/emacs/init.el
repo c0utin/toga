@@ -48,10 +48,9 @@
 
 (use-package rust-mode)
 
-(use-package go-mode
-  :ensure t
-  :mode "\\.go\\'"
-  :hook (go-mode . lsp-deferred))
+(use-package go-mode)
+
+(use-package js2-mode)
 
 (use-package nix-mode
   :mode ("\\.nix\\'" "\\.nix.in\\'"))
