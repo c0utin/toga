@@ -95,11 +95,15 @@
 
   services.libinput.enable = true;
 
+  # calibre
+  services.udev.packages = with pkgs; [ calibre ];
+  services.udisks2.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.toga = {
     isNormalUser = true;
     description = "toga";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "audio" "video" "dialout" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird

@@ -50,7 +50,13 @@
 
 (use-package go-mode)
 
-(use-package js2-mode)
+(use-package js2-mode
+  :ensure t
+  :mode (("\\.js\\'"  . js2-mode)   ; Force .js \u2192 js2-mode
+         ("\\.jsx\\'" . js2-mode)   ; JSX support
+         ("\\.ts\\'"  . js2-mode))  ; TypeScript (if already working)
+  :config
+  (setq js2-basic-offset 2))        ; Optional: Set indentation
 
 (use-package nix-mode
   :mode ("\\.nix\\'" "\\.nix.in\\'"))

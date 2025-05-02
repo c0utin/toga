@@ -28,6 +28,7 @@
     zapzap
     vesktop
     calibre
+    mtpfs 
     gnumake
     taskwarrior3
     taskwarrior-tui
@@ -46,11 +47,6 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
 
