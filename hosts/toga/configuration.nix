@@ -103,7 +103,7 @@
   users.users.toga = {
     isNormalUser = true;
     description = "toga";
-    extraGroups = [ "networkmanager" "wheel" "plugdev" "audio" "video" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "audio" "video" "dialout" "docker"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
@@ -148,7 +148,12 @@
     unzip
     lsof
     pavucontrol
+    docker
   ];
+
+  # docker
+  virtualisation.docker.enable = true;
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
