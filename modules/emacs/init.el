@@ -81,3 +81,9 @@
 (activate-input-method "latin-1-postfix")
 (setq default-input-method "latin-1-postfix")
 
+;; DIRED
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
+(setq create-lockfiles nil)
+(setq make-backup-files nil)
+(setq auto-save-default nil)
