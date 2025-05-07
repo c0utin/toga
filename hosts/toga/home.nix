@@ -33,6 +33,7 @@
     taskwarrior3
     taskwarrior-tui
     postgresql
+    dbeaver-bin
 
 
     # flake
