@@ -34,6 +34,8 @@
     taskwarrior-tui
     postgresql
     dbeaver-bin
+    google-cloud-sdk
+    docker-compose
 
 
     # flake
