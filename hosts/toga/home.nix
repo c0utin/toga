@@ -36,24 +36,23 @@
     dbeaver-bin
     google-cloud-sdk
     docker-compose
+    zsh
+    oh-my-zsh
 
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
 
+ # /.config 
+  home.file.".zshrc".source = "${inputs.self}/modules/zsh/zshrc";
+  programs.zsh = {
+    enable = true;
+    initExtra = ''
+      source ${inputs.self}/modules/zsh/zshrc
+    '';
   };
-
-
-  # /.config 
 
 	# i3
 	xdg.configFile."i3/config".source = "${inputs.self}/modules/i3/config";
@@ -64,6 +63,7 @@
 
   home.sessionVariables = {
      EDITOR = "emacs";
+     SHELL  = "${pkgs.zsh}/bin/zsh";
   };
 
   # Let Home Manager install and manage itself.

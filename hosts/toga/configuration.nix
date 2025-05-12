@@ -101,6 +101,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.toga = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "toga";
     extraGroups = [ "networkmanager" "wheel" "plugdev" "audio" "video" "dialout" "docker"];
@@ -109,6 +110,11 @@
     #  thunderbird
     ];
   };
+
+  # Make zsh default
+  environment.variables.SHELL = "/run/current-system/sw/bin/zsh";
+  programs.zsh.enable = true;
+  environment.shells = with pkgs; [ zsh ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -120,6 +126,7 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
