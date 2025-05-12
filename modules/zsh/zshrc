@@ -1,11 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # NIX MODE INDICATOR
-if [[ "$IN_NIX_SHELL" == "pure" || "$IN_NIX_SHELL" == "1" ]]; then
-  NIX_SHELL_INDICATOR="%F{red}[nix develop]%f "
+if [[ "$IN_DEV_SHELL" == "1" ]]; then
+  NIX_SHELL_INDICATOR="%F{cyan}[nix develop]%f "
 else
   NIX_SHELL_INDICATOR=""
 fi
 
-# Set prompt
-PROMPT='${NIX_SHELL_INDICATOR}%F{cyan}%n@%m%f:%F{green}%~%f %# '
+PROMPT="${NIX_SHELL_INDICATOR}%F{white}%n@%m%f:%F{white}%~%f %# "
