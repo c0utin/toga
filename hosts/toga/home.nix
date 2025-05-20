@@ -38,6 +38,7 @@
     docker-compose
     zsh
     oh-my-zsh
+    helix
 
 
     # flake
