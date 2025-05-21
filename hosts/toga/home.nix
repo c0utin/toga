@@ -64,8 +64,7 @@
 	xdg.configFile."emacs/init.el".source = "${inputs.self}/modules/emacs/init.el";
 
 	# xmodmap (corne)
-	home.file.".Xmodmap".source = ./modules/xmodmap/Xmodmap;
-
+	home.file.".Xmodmap".source = "${inputs.self}/modules/xmodmap/Xmodmap";
 
 	
   home.sessionVariables = {
