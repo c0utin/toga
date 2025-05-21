@@ -23,25 +23,33 @@
 (use-package magit)
 
 ;; Clipboard settings
+;; Enable xclip to sync with system clipboard
 (use-package xclip
   :config
-  (xclip-mode 1)
-  (defun my/copy-to-system ()
-    "Copy region to system clipboard using xclip."
-    (interactive)
-    (when (use-region-p)
-      (call-process-region (region-beginning) (region-end)
-                           "xclip" nil nil nil "-selection" "clipboard")
-      (message "Copied to system clipboard")))
-  (defun my/paste-from-system ()
-    "Paste text from system clipboard using Emacs native functions."
-    (interactive)
-    (insert (or (gui-get-selection 'CLIPBOARD) "")))
-  (global-set-key (kbd "C-c c") 'my/copy-to-system)
-  (global-set-key (kbd "C-c v") 'my/paste-from-system))
+  (xclip-mode 1))
 
-(setq select-enable-clipboard t)
-(setq select-enable-primary t)
+;; Functions for manual copy/paste to system clipboard
+(defun my/copy-to-clipboard (beg end)
+  "Copy region to system clipboard using xclip."
+  (interactive "r")
+  (when (use-region-p)
+    (call-process-region beg end "xclip" nil nil nil "-selection" "clipboard")
+    (message "Copied to clipboard")))
+
+(defun my/paste-from-clipboard ()
+  "Paste from system clipboard using xclip."
+  (interactive)
+  (let ((clipboard-text (shell-command-to-string "xclip -o -selection clipboard")))
+    (insert clipboard-text)))
+
+;; General keybindings with evil + leader
+(use-package general
+  :config
+  (general-define-key
+   :states '(normal visual)
+   :prefix "SPC"
+   "y" 'my/copy-to-clipboard
+   "p" 'my/paste-from-clipboard))
 
 ;; languages
 (use-package zig-mode)

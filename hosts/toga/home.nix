@@ -39,6 +39,8 @@
     zsh
     oh-my-zsh
     helix
+    google-chrome
+    xorg.xmodmap
 
 
     # flake
@@ -61,7 +63,11 @@
 	# emacs
 	xdg.configFile."emacs/init.el".source = "${inputs.self}/modules/emacs/init.el";
 
+	# xmodmap (corne)
+	home.file.".Xmodmap".source = ./modules/xmodmap/Xmodmap;
 
+
+	
   home.sessionVariables = {
      EDITOR = "emacs";
      SHELL  = "${pkgs.zsh}/bin/zsh";
@@ -77,4 +83,5 @@
 		userEmail = "rafaelcouto111@gmail.com";
 		extraConfig.init.defaultBranch = "main";
 	};
+
 }
