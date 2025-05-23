@@ -6,7 +6,7 @@
 	    typescript
 	    typescript-language-server
 	    gcc
-    	    nodejs_23
+    	    nodejs
 	    yarn
 	];
 
