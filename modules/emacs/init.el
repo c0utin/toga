@@ -51,14 +51,9 @@
                 (shell-command-to-string "xclip -o -selection clipboard"))))
     (insert text)))
 
-;;; Custom keybindings using general.el
-(use-package general
-  :config
-  (general-define-key
-   :keymaps 'global
-   :prefix "SPC" ;; Space as leader key
-   "y" 'my/copy-to-clipboard
-   "p" 'my/paste-from-clipboard))
+;; Keybindings for clipboard actions (use standard Emacs convention: C-c + key)
+(global-set-key (kbd "C-c y") #'my/copy-to-clipboard)
+(global-set-key (kbd "C-c p") #'my/paste-from-clipboard)
 
 ;;; Language support
 (use-package zig-mode)
@@ -70,7 +65,7 @@
          ("\\.jsx\\'" . js2-mode)
          ("\\.ts\\'"  . js2-mode))
   :config
-  (setq js2-basic-offset 2)) ;; Indentation size
+  (setq js2-basic-offset 2))
 
 (use-package nix-mode
   :mode ("\\.nix\\'" "\\.nix.in\\'"))

@@ -8,3 +8,7 @@ else
 fi
 
 PROMPT="${NIX_SHELL_INDICATOR}%F{white}%n@%m%f:%F{white}%~%f %# "
+
+# femboy things
+export PATH="$HOME/.cargo/bin:$PATH"
+
