@@ -1,3 +1,5 @@
+theme = "tokyonight"
+
 [editor]
 
 [keys.normal]

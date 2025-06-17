@@ -68,6 +68,8 @@
 
 	# helix
 	xdg.configFile."helix/config.toml".source = "${inputs.self}/modules/helix/config.toml";
+	xdg.configFile."helix/themes".source = "${inputs.self}/modules/helix/themes";
+
 
 	
   home.sessionVariables = {
