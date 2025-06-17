@@ -93,6 +93,11 @@
     #media-session.enable = true;
   };
 
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true; 
+  services.dbus.enable = true;    
+  hardware.bluetooth.powerOnBoot = true;
+
   services.libinput.enable = true;
 
   # calibre

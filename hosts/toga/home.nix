@@ -41,6 +41,8 @@
     helix
     google-chrome
     xorg.xmodmap
+    blueman
+    gex
 
 
     # flake
