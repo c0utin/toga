@@ -66,6 +66,9 @@
 	# xmodmap (corne)
 	home.file.".Xmodmap".source = "${inputs.self}/modules/xmodmap/Xmodmap";
 
+	# helix
+	xdg.configFile."helix/config.toml".source = "${inputs.self}/modules/helix/config.toml";
+
 	
   home.sessionVariables = {
      EDITOR = "emacs";
