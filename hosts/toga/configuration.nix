@@ -43,15 +43,15 @@
 
   services.xserver = {
     enable = true;
-  
+
     desktopManager = {
       xterm.enable = false;
-    };  
+    };
 
     displayManager = {
       defaultSession = "none+i3";
     };
-   
+
     windowManager.i3 = {
       enable = true;
       extraPackages = with pkgs; [
@@ -94,8 +94,8 @@
   };
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true; 
-  services.dbus.enable = true;    
+  services.blueman.enable = true;
+  services.dbus.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 
   services.libinput.enable = true;
@@ -103,6 +103,10 @@
   # calibre
   services.udev.packages = with pkgs; [ calibre ];
   services.udisks2.enable = true;
+
+  # smartphone share
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.toga = {
@@ -146,7 +150,7 @@
     git
     curl
     kitty
-    vim   
+    vim
     wget
     brightnessctl
     alsa-utils
@@ -161,6 +165,9 @@
     lsof
     pavucontrol
     docker
+    gvfs
+    glib
+    jmtpfs
   ];
 
   # docker
@@ -187,5 +194,5 @@
   # networking.firewall.enable = false;
 
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; 
+  system.stateVersion = "25.05";
 }
