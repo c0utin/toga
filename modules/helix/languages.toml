@@ -1,3 +1,9 @@
+[[language]]
+name = "lean"
+scope = "source.lean"
+file-types = ["lean"]
+auto-format = false
+
 [language-server.lean]
 command = "lean"
 args = ["--server"]
