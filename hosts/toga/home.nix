@@ -43,6 +43,7 @@
     xorg.xmodmap
     blueman
     gex
+    windsurf
 
 
     # flake
