@@ -45,7 +45,6 @@
     gex
     windsurf
 
-
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
@@ -53,11 +52,17 @@
 
  # /.config 
   home.file.".zshrc".source = "${inputs.self}/modules/zsh/zshrc";
-  programs.zsh = {
-    enable = true;
-    initExtra = ''
-      source ${inputs.self}/modules/zsh/zshrc
-    '';
+#  programs.zsh = {
+#    enable = true;
+#    initExtra = ''
+#      source ${inputs.self}/modules/zsh/zshrc
+#    '';
+#  };
+
+	
+  home.sessionVariables = {
+     EDITOR = "emacs";
+     SHELL  = "${pkgs.zsh}/bin/zsh";
   };
 
 	# i3
@@ -74,12 +79,6 @@
   xdg.configFile."helix/languages.toml".source = "${inputs.self}/modules/helix/languages.toml";
 	xdg.configFile."helix/themes".source = "${inputs.self}/modules/helix/themes";
 
-
-	
-  home.sessionVariables = {
-     EDITOR = "emacs";
-     SHELL  = "${pkgs.zsh}/bin/zsh";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
