@@ -44,6 +44,7 @@
     blueman
     gex
     windsurf
+    zig 
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
