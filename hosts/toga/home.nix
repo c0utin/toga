@@ -44,7 +44,9 @@
     blueman
     gex
     windsurf
-    zig 
+    zig 		
+    claude-code
+    manga-cli
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
