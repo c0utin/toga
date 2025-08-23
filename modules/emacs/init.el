@@ -15,9 +15,13 @@
 (setq x-super-keysym 'meta)
 
 ;;; Theme
-(use-package gruber-darker-theme
+(use-package color-theme-modern
   :config
-  (load-theme 'gruber-darker t))
+  (load-theme 'word-perfect t))
+
+;; (use-package gruber-darker-theme
+;;   :config
+;;   (load-theme 'gruber-darker t))
 
 ;;; Git integration
 (use-package magit)
