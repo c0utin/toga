@@ -23,6 +23,16 @@
 ;;   :config
 ;;   (load-theme 'gruber-darker t))
 
+(use-package direnv
+  :config
+  (direnv-mode))
+
+
+(use-package direnv
+	       :config
+	         (direnv-mode))
+
+
 ;;; Git integration
 (use-package magit)
 
