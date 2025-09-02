@@ -52,6 +52,9 @@
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
+	programs.direnv.enable = true;
+	programs.direnv.nix-direnv.enable = true;
+
 
  # /.config 
   home.file.".zshrc".source = "${inputs.self}/modules/zsh/zshrc";

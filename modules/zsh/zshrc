@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+eval "$(direnv hook zsh)"
+
 # NIX MODE INDICATOR
 if [[ "$IN_DEV_SHELL" == "1" ]]; then
   NIX_SHELL_INDICATOR="%F{cyan}[nix develop]%f "
