@@ -85,6 +85,9 @@
   xdg.configFile."helix/languages.toml".source = "${inputs.self}/modules/helix/languages.toml";
 	xdg.configFile."helix/themes".source = "${inputs.self}/modules/helix/themes";
 
+	# zed	
+	xdg.configFile."zed/themes".source = "${inputs.self}/modules/zed/themes";
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
