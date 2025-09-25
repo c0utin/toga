@@ -6,6 +6,7 @@
     ./languages/go.nix
     ./languages/js.nix  
     ./languages/femboy.nix
+    ./languages/zig.nix
   ];
 
   home.username = "toga";
@@ -44,9 +45,10 @@
     blueman
     gex
     windsurf
-    zig 		
     claude-code
     manga-cli
+    jetbrains-toolbox
+    codex 
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
