@@ -14,6 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    helium-browser = {
+      url = "./modules/helium/";
+    };
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

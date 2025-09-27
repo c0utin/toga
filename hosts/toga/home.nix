@@ -52,6 +52,7 @@
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.helium-browser.packages.${pkgs.system}.default
   ];
 
 	programs.direnv.enable = true;
