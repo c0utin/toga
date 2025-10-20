@@ -19,7 +19,6 @@
   nixpkgs.config.allowUnfree = true;
  
   home.packages = with pkgs; [
-    nushell
     emacs
     zed-editor
     obs-studio
@@ -31,11 +30,8 @@
     calibre
     mtpfs 
     gnumake
-    taskwarrior3
-    taskwarrior-tui
     postgresql
     dbeaver-bin
-    google-cloud-sdk
     docker-compose
     zsh
     oh-my-zsh
@@ -44,11 +40,11 @@
     xorg.xmodmap
     blueman
     gex
-    windsurf
-    claude-code
+    #claude-code
     manga-cli
-    jetbrains-toolbox
-    codex 
+    pkg-config
+    codex
+    gemini-cli
 
     # flake
     inputs.zen-browser.packages.${pkgs.system}.default
