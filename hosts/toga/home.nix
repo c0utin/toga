@@ -44,6 +44,7 @@
     manga-cli
     pkg-config
     codex
+    ghostty
     gemini-cli
 
     # flake
@@ -72,6 +73,9 @@
 
 	# i3
 	xdg.configFile."i3/config".source = "${inputs.self}/modules/i3/config";
+
+	# ghostty
+	xdg.configFile."ghostty/config".source = "${inputs.self}/modules/ghostty/config";
 
 	# emacs
 	xdg.configFile."emacs/init.el".source = "${inputs.self}/modules/emacs/init.el";

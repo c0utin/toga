@@ -149,7 +149,6 @@
     gh
     git
     curl
-    kitty
     vim
     wget
     brightnessctl
