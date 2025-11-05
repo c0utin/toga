@@ -16,3 +16,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.local/node_modules/.bin:$PATH"
 
+#cartesi
+export PATH=$HOME/.npm-global/bin:$PATH
