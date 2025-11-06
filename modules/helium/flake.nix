@@ -12,8 +12,8 @@
         pname = "helium";
         version = "0.5.6.1"; 
         src = pkgs.fetchurl {
-          url = "https://github.com/imputnet/helium-linux/releases/download/0.5.6.1/helium-0.5.6.1-x86_64.AppImage";
-          sha256 = "0cnp9plzsk1s4lkrnbswhkjxi9i57v1i9lvys2k0iviqw2m56n17";
+          url = "https://github.com/imputnet/helium-linux/releases/download/0.6.3.1/helium-0.6.3.1-x86_64.AppImage";
+          sha256 = "0ifmvnknppvik79yajknqkc7v3qwk9c3gplarlp7dclxncn6kcip";
         };
       };
     };
